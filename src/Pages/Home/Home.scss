@@ -48,6 +48,47 @@ section#about {
         }
     }
 }
+#feature{
+    margin-bottom: 3rem;
+
+
+    #sliderPart{
+        .swiper-container {
+            overflow: visible;
+        }
+
+        .swiper-button-prev{
+            left:-320px;
+            &::after{
+                background:white;
+                font-size:40px;
+                padding:10px 20px;
+                border-radius: 50%;
+            }
+        }
+        .swiper-button-next{
+            @extend .swiper-button-prev;
+            left: auto;
+            right: -320px;
+        }
+        .SwiperSlider-box{
+            height:270px;
+            background:#0B0B0C;
+            padding:40px 20px;
+            border-radius: 10px;
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
 
 @keyframes upDown {
     0% {

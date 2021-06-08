@@ -21,9 +21,6 @@ export default function WhyPolyStarterSlider({children}) {
                 spaceBetween={30}
                 effect={"fade"}
                 navigation={true}
-                pagination={{
-                    clickable: true,
-                }}
                 className="mySwiper">
                 {children}
             </Swiper>
