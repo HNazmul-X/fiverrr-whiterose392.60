@@ -9,11 +9,11 @@ const SliderCard = ({img, title, desc}) => {
                         <img src={img} alt="" />
                     </div>
                     <div className="col-md-9">
-                        <h1 className=" text-uppercase">OFFERINGS</h1>
+                        <h1 className=" text-uppercase">{title}</h1>
                     </div>
                 </div>
                 <div className="px-3">
-                    <p className="text-secondary">POLR token holders who qualify for our tiered system are guaranteed varied allocation to early sales of projects launching through our platform.</p>
+                    <p className="text-secondary">{desc}</p>
                 </div>
             </div>
         </>

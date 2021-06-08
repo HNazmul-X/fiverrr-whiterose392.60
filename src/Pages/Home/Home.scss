@@ -72,10 +72,11 @@ section#about {
             right: -320px;
         }
         .SwiperSlider-box{
-            height:270px;
+            height:auto;
             background:#0B0B0C;
             padding:40px 20px;
             border-radius: 10px;
+            transition: 0.3s all !important;
 
         }
     }

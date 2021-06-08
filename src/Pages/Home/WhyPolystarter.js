@@ -15,22 +15,32 @@ const WhyPolystarter = () => {
                 <div className="col-6">
                     <WhyPolyStarterSlider>
                         <SwiperSlide className="SwiperSlider-box">
-                            <SliderCard img={featureimg} title/>
+                            <SliderCard
+                                img={featureimg}
+                                title="ASSURANCE"
+                                desc="Investing in projects that launch through PolyStarter is safer than ever before. Because now, each project launched through our platform is backed through our insurance pool."
+                            />
                         </SwiperSlide>
                         <SwiperSlide className="SwiperSlider-box">
-                            <div>
-                                <div className="row align-items-center p-3 ">
-                                    <div className="col-md-3">
-                                        <img src={featureimg} alt="" />
-                                    </div>
-                                    <div className="col-md-9">
-                                        <h1 className=" text-uppercase">FAIRNESS</h1>
-                                    </div>
-                                </div>
-                                <div className="px-3">
-                                    <p className="text-secondary">We protect our group backers from presale dumps by setting individual limits and by having a fair delivery method.</p>
-                                </div>
-                            </div>
+                            <SliderCard
+                                img={featureimg}
+                                title="ASSURANCE"
+                                desc="Investing in projects that launch through PolyStarter is safer than ever before. Because now, each project launched through our platform is backed through our insurance pool."
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide className="SwiperSlider-box">
+                            <SliderCard
+                                img={featureimg}
+                                title="ASSURANCE"
+                                desc="Investing in projects that launch through PolyStarter is safer than ever before. Because now, each project launched through our platform is backed through our insurance pool."
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide className="SwiperSlider-box">
+                            <SliderCard
+                                img={featureimg}
+                                title="ASSURANCE"
+                                desc="Investing in projects that launch through PolyStarteInvesting in projects that launch through PolyStarter is safer than ever before. Because now, each project launched through our platform is backed through our insurance pool."
+                            />
                         </SwiperSlide>
                     </WhyPolyStarterSlider>
                 </div>

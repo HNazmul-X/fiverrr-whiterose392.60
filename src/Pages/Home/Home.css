@@ -72,10 +72,12 @@ section#about .About-Card_edaNDK:hover {
 }
 
 #feature #sliderPart .SwiperSlider-box {
-  height: 270px;
+  height: auto;
   background: #0B0B0C;
   padding: 40px 20px;
   border-radius: 10px;
+  -webkit-transition: 0.3s all !important;
+  transition: 0.3s all !important;
 }
 
 @-webkit-keyframes upDown {
