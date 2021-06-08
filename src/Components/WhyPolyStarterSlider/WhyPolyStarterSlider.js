@@ -21,7 +21,9 @@ export default function WhyPolyStarterSlider({children}) {
                 spaceBetween={30}
                 effect={"fade"}
                 navigation={true}
-                className="mySwiper">
+                className="mySwiper"
+                slidesPerView={"auto"}
+                >
                 {children}
             </Swiper>
         </>

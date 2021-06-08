@@ -52,7 +52,7 @@ section#about .About-Card_edaNDK:hover {
 }
 
 #feature #sliderPart .swiper-container {
-  overflow: visible;
+  overflow: hidden;
 }
 
 #feature #sliderPart .swiper-button-prev, #feature #sliderPart .swiper-button-next {
