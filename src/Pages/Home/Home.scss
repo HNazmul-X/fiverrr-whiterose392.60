@@ -1,107 +1,489 @@
-$primary-color:  #34ACEA;
-$primary-color-deep: #1270ED;
-$primary-gradient: linear-gradient(to right ,$primary-color, $primary-color-deep);
+$primary-color: #34acea;
+$primary-color-deep: #1270ed;
+$primary-gradient: linear-gradient(to right, $primary-color, $primary-color-deep);
 
+body{
+  @media screen and (max-width:767px){
+    overflow-x: hidden;
+  }
+}
 #header {
-    width: 100%;
-    height: auto;
-    background: url(../../Images/background.png) no-repeat;
-    h1 {
-        font-size: 60px;
-        font-weight: bold;
-        text-align: center;
-        font-family: aveneirBold;
+  width: 100%;
+  height: auto;
+  background: url(../../Images/header-background.png) no-repeat;
+  background-size: cover;
+  h1 {
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    font-family: aveneirBold;
+    @media screen and (max-width: 800px) {
+      font-size:40px;
+      text-align: left;
     }
-    .banner-illustration {
-        img {
-            animation: upDown 3s infinite;
-        }
+  }
+  .banner-illustration {
+    img {
+      animation: upDown 3s infinite;
     }
+  }
+}
+.form-control {
+  &:focus,
+  &:active {
+    border: none;
+    outline: none;
+    border-width: 0px;
+    box-shadow: none;
+  }
 }
 
 section#about {
-    .About-Card_edaNDK {
-        padding:20px;
-        margin:10px;
-        transition: 0.7s;
-        border-radius: 10px;
-        .icon {
-            img{
-                margin-bottom: 20px;
-                width:60px;
-            }
-        }
-        .card-title{
-            color:$primary-color !important;
-            font-size:20px;
-            font-family:aveneirBold;
-            font-weight: normal;
-        }
-        .card-text-A943Ssh{
-            font-family: aveneirBold;
-            font-size:15px;
-        }
-        &:hover{
-            background:#030712;
-            transform: translateY(-10px);
-
-        }
+  .About-Card_edaNDK {
+    padding: 20px;
+    margin: 10px;
+    transition: 0.7s;
+    border-radius: 10px;
+    .icon {
+      img {
+        margin-bottom: 20px;
+        width: 60px;
+      }
     }
+    .card-title {
+      color: $primary-color !important;
+      font-size: 20px;
+      font-family: aveneirBold;
+      font-weight: normal;
+    }
+    .card-text-A943Ssh {
+      font-family: aveneirBold;
+      font-size: 15px;
+    }
+    &:hover {
+      background: #030712;
+      transform: translateY(-10px);
+    }
+  }
 }
-#feature{
-    margin-bottom: 3rem;
+#feature {
+  margin-bottom: 3rem;
 
-
-    #sliderPart{
-        .swiper-container {
-            overflow: hidden;
+  .slider-box_DINDnad {
+      height: auto;
+      background: #0b0b0c;
+      padding: 40px 20px;
+      border-radius: 10px;
+      transition: 0.3s all !important;
+      .card-wrapper{
+        @media screen and (max-width:992px){
+          text-align: center;
         }
+      }
+    }
 
-        .swiper-button-prev{
-            left:-320px;
-            &::after{
-                background:white;
-                font-size:40px;
-                padding:10px 20px;
-                border-radius: 50%;
+  
+}
+
+#roadmap {
+  padding-bottom: 7rem;
+  .road-map-full-area {
+    .roadmap-line {
+      width: 100%;
+      height: 3px;
+      background: rgb(109, 109, 109);
+      position: relative;
+      z-index: 1;
+      margin: 7rem auto;
+      margin-top: 11rem;
+
+      .road-map-card {
+        position: absolute;
+        width: 300px;
+        z-index: 1;
+        &.card-1 {
+          left: 0px;
+          top: 40px;
+        }
+        &.card-2 {
+          left: 20%;
+          top: 40px;
+        }
+        &.card-3 {
+          left: 40%;
+          bottom: 25px;
+        }
+        &.card-4 {
+          left: 60%;
+          top: 40px;
+        }
+        &.card-5 {
+          left: 80%;
+          bottom: 25px;
+          width:168px;
+        }
+      }
+
+      .road-map-circle {
+        height: 12px;
+        width: 12px;
+        position: absolute;
+        z-index: 1;
+        background: $primary-color ;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @for $i from 1 through 4 {
+          &:nth-child(#{$i}) {
+            left: 20% * $i;
+          }
+          @media screen and (max-width: 767px) {
+            &:nth-child(#{$i}) {
+              top: 20% * $i;
             }
+          }
         }
-        .swiper-button-next{
-            @extend .swiper-button-prev;
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 5px;
+        height: 980px;
+        margin: 20px 0px 20px 51vw;
+        p{
+          font-size:13px;
+        }
+        h1{
+          font-size:20px;
+        }
+        .road-map-card {
+          width: 120px;
+          &.card-1 {
+            top: 0px;
+            /* right: -166px; */
+            left: 26px;
+            color: dimgray;
+            font-family: "aveneirBold";
+          }
+          &.card-2 {
+            top: 20%;
+            /* left: 40px; */
+            right: 26px;
             left: auto;
-            right: -320px;
+          }
+          &.card-3 {
+            top: 40%;
+            /* right: 25px; */
+            left: 25px;
+          }
+          &.card-4 {
+            top: 60%;
+            left: auto;
+            right: 10px;
+          }
+          &.card-5 {
+            top: 80%;
+            left: 25px;
+            right: auto;
+            width:124px;
+            
+          }
         }
-        .SwiperSlider-box{
-            height:auto;
-            background:#0B0B0C;
-            padding:40px 20px;
-            border-radius: 10px;
-            transition: 0.3s all !important;
-
-        }
+      }
     }
+  }
 }
 
+#investor_section {
+  background: url(../../Images/porltext.png) no-repeat center;
+  background-size: cover;
+  padding-bottom: 2rem;
+  .logo-section .ufrer-part {
+    padding: 60px 0;
+    text-align: center;
+  }
+  .logo-section .ufrer-part .small-line,
+  .contact-section .ufrer-part .small-line {
+    font-size: 13px;
+  }
+  .logo-section .ufrer-part .the-ufrer-title h2,
+  .contact-section .ufrer-part .the-ufrer-title h2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .logo-section .logos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .logo-section .logos .logo {
+    width: 30%;
+    margin-bottom: 50px;
+    transition: all 1s;
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+  .logo-section .logos .logo img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+  }
+  .DSfmslfosmff {
+    background: #0e0f10;
+  }
+  @media screen and (max-width: 767px) {
+    .logo-section .logos .nai-ha {
+      display: none;
+    }
 
+    .logo-section .logos .logo {
+      width: 50%;
+    }
+    .logo-section .logos .sudu-nai {
+      width: 100%;
+    }
+  }
+}
 
+#Subscriptions {
+  body {
+    background: #000;
+  }
 
+  .the-header-part {
+    text-align: center;
+  }
 
+  .the-header-part .the-main-title {
+    color: #fff;
+  }
 
+  .the-gradient-boxes {
+    padding: 100px 0 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &.second {
+      padding-top: 20px;
+      max-width: 700px;
+    }
+    &.third {
+      padding-top: 20px;
+      max-width: 700px;
+    }
+  }
 
+  .first-box {
+    background: linear-gradient(to top right, rgb(14, 15, 16), rgb(62, 39, 11));
+  }
 
+  .second-box {
+    background: linear-gradient(to top right, rgb(14, 15, 16), rgb(61, 61, 61));
+  }
 
+  .third-box {
+    background: linear-gradient(to top right, rgb(14, 15, 16), rgb(84, 69, 37));
+  }
+
+  .fourth-box {
+    background: linear-gradient(to top right, rgb(14, 15, 16), rgb(19, 56, 41));
+  }
+
+  .fifth-box {
+    background: linear-gradient(to top right, rgb(14, 15, 16), rgb(74, 12, 13));
+  }
+
+  .sixth-box {
+    background: linear-gradient(to top right, rgb(14, 15, 16), rgb(113, 115, 94));
+  }
+
+  .seventh-box {
+    background: linear-gradient(to top right, rgb(14, 15, 16), rgb(60, 88, 98));
+  }
+
+  .the-gradient-boxes .the-gradient-box {
+    width: 320px;
+    padding: 30px;
+    color: #fff;
+    border-radius: 12px;
+    margin: 0px 25px 15px 0px;
+
+    @media screen and (max-width: 500px) {
+      width:300px;
+      margin:auto;
+  margin-bottom: 1rem;
+    }
+
+    .first-block {
+      .first-block-title {
+        h2 {
+          font-size: 3.5rem;
+          font-family: aveneirBold;
+        }
+      }
+    }
+    .the-second-title {
+      h3 {
+        font-family: aveneirBold;
+      }
+    }
+  }
+
+  .the-gradient-boxes .the-gradient-box .first-block .small-line,
+  .the-header-part .small-line {
+    letter-spacing: 1.5px;
+    color: #969595;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .the-gradient-boxes .the-gradient-box .first-block .first-block-title h2,
+  .the-gradient-boxes .the-gradient-box .second-block .the-number h2 {
+    font-size: 38px;
+    font-weight: bolder;
+  }
+
+  .the-gradient-boxes .the-gradient-box .second-block {
+    margin-top: 50px;
+  }
+
+  .the-gradient-boxes .the-gradient-box .second-block .the-second-title h3 {
+    font-weight: bolder;
+  }
+
+  .the-gradient-boxes .the-gradient-box .second-block .the-second-title h3::after,
+  .the-gradient-boxes .the-gradient-box .second-block .second-block-middle::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    margin: 15px 0;
+  }
+
+  .the-gradient-boxes .the-gradient-box .second-block .small-line {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #969595;
+    font-weight: bolder;
+  }
+
+  .the-gradient-boxes .the-gradient-box .second-block .the-third-title h4 {
+    font-size: 16px;
+    font-weight: bolder;
+  }
+}
+
+#contact {
+  padding-bottom: 150px;
+  .contact-section {
+    width: 80%;
+    margin: auto;
+    padding: 45px;
+    background: rgba(250, 250, 250, 0.1);
+    border-radius: 13px;
+
+    @media screen and (max-width:767px){
+      width:97%;
+    }
+  }
+
+  .contact-section .ufrer-part {
+    padding-bottom: 25px;
+    text-align: center;
+  }
+
+  /* .contact-section .the-contact-form {
+
+        } */
+  .contact-section .the-contact-form .the-first-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .contact-section .the-contact-form .the-first-block .input-holder,
+  .contact-section .the-contact-form .the-second-block .input-holder {
+    width: 45%;
+    label {
+      &:focus {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .contact-section .the-contact-form input,
+  .contact-section .the-contact-form textarea {
+    background: #121212;
+    outline: none;
+    border: none;
+    &:active,
+    &:focus {
+      border-bottom: 1px solid white;
+    }
+  }
+
+  .submit-button {
+    color: white !important;
+    color: #030712;
+    padding: 19px 30px;
+  }
+  .contact-section .the-contact-form textarea {
+    height: auto !important;
+  }
+
+  @media screen and (max-width: 767px) {
+    .contact-section .the-contact-form .the-first-block .input-holder,
+    .contact-section .the-contact-form .the-second-block .input-holder {
+      width: 100%;
+    }
+  }
+}
+
+#FAQs {
+  margin-bottom: 3rem;
+  .title{
+    transform: translateX(-50px);
+    @media screen and (max-width: 992px){
+      transform: none;
+    }
+  }
+  #collapse-Card {
+    background: rgba(255, 255, 255, 0.055);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.144);
+    color: dimgrey;
+    .clicker-button {
+      background: transparent !important;
+      border: none;
+      padding: 10px;
+      font-size: 20px;
+      color: dimgrey;
+    }
+
+    .collapsed-content {
+      background: transparent !important;
+    }
+  }
+}
 
 @keyframes upDown {
-    0% {
-        -webkit-transform: translate(0, 0px);
-        transform: translate(0, 0px);
-    }
-    50% {
-        -webkit-transform: translate(0, 10px);
-        transform: translate(0, 10px);
-    }
-    100% {
-        -webkit-transform: translate(0, -0px);
-        transform: translate(0, -0px);
-    }
+  0% {
+    -webkit-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+  }
+  50% {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+  100% {
+    -webkit-transform: translate(0, -0px);
+    transform: translate(0, -0px);
+  }
 }

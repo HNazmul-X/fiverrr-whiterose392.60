@@ -1,31 +1,22 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import React from "react";
 
-// Import Swiper styles
-import "swiper/swiper.min.css";
-import "swiper/components/effect-fade/effect-fade.min.css";
-import "swiper/components/navigation/navigation.min.css";
-import "swiper/components/pagination/pagination.min.css";
 
-// import Swiper core and required modules
-import SwiperCore, { EffectFade, Navigation, Pagination } from "swiper/core";
-
-// install Swiper modules
-SwiperCore.use([EffectFade, Navigation, Pagination]);
-
-export default function WhyPolyStarterSlider({children}) {
-    return (
-        <>
-            <Swiper
-                spaceBetween={30}
-                effect={"fade"}
-                navigation={true}
-                className="mySwiper"
-                slidesPerView={"auto"}
-                >
-                {children}
-            </Swiper>
-        </>
-    );
+export default function WhyPolyStarterSlider({ children }) {
+  return (
+    <>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          {children}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </>
+  );
 }

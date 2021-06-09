@@ -3,7 +3,7 @@ import React from 'react';
 const SliderCard = ({img, title, desc}) => {
     return (
         <>
-            <div>
+            <div className="card-wrapper">
                 <div className="row align-items-center p-3 ">
                     <div className="col-md-3">
                         <img src={img} alt="" />

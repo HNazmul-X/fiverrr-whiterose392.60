@@ -68,6 +68,9 @@
   display: flex;
   margin-bottom: 0px !important;
   width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content .hnazmul-navbar-content-wrapper ul.navbar-list li.navbar-list-item {
@@ -115,6 +118,9 @@
     display: block;
     margin-left: auto;
   }
+  .hnazmul-navbar .hnazmul-navbar-container .hnazmul-nav-toggle-btn button {
+    background: transparent;
+  }
   .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content {
     display: block;
     position: fixed;
@@ -141,11 +147,19 @@
   }
   .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content .hnazmul-navbar-content-wrapper ul.navbar-list {
     display: block;
-    background: #d3e2d6;
+    background: #131516;
     width: 80%;
+    padding-left: 0px;
   }
   .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content .hnazmul-navbar-content-wrapper ul.navbar-list li.navbar-list-item {
     text-align: center;
+  }
+  .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content .hnazmul-navbar-content-wrapper ul.navbar-list li.navbar-list-item .navbar-list-link {
+    color: white;
+    width: 100%;
+  }
+  .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content .hnazmul-navbar-content-wrapper ul.navbar-list li.navbar-list-item .navbar-list-link:hover {
+    background: rgba(109, 109, 109, 0.164);
   }
   .hnazmul-navbar .hnazmul-navbar-container .hnazmul-navbar-content .hnazmul-navbar-content-wrapper button.navbar-closer-icon {
     position: absolute;
